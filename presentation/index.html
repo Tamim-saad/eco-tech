@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920,height=1080">
+  <title>NodiWatch — Eco-Tech Hackathon 2026 | Team AlphaVerse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ══ SLIDE 1: TITLE ══ -->
+  <div class="slide ts active" id="s1">
+    <div class="lb">🛰️ ECO-TECH HACKATHON 2026 &nbsp;•&nbsp; ENVIRONMENT WATCH: BUET</div>
+    <h1><span class="gt">NodiWatch</span></h1>
+    <p class="sub">AI-Powered Satellite Surveillance for Bangladesh's Rivers — <strong
+        style="color:var(--text)">Catching Polluters &amp; Land Grabbers from Space</strong></p>
+    <div class="tg">🌊 Protecting Rivers with Intelligence</div>
+    <div style="margin-top:28px;color:var(--muted);font-size:.95rem">Team AlphaVerse &nbsp;•&nbsp; February 2026</div>
+  </div>
+
+  <!-- ══ SLIDE 2: PROBLEM — THE DATA ══ -->
+  <div class="slide" id="s2">
+    <span class="sn">02 / 11</span>
+    <h3>① Problem Statement</h3>
+    <h2>Bangladesh's Rivers Are <span class="gt">Under Siege</span></h2>
+    <div class="sg">
+      <div class="sc r">
+        <div class="n">2,500+</div>
+        <div class="l">Factories near Dhaka river system</div>
+      </div>
+      <div class="sc y">
+        <div class="n">40%</div>
+        <div class="l">Dhaka riverbanks lost to encroachment</div>
+      </div>
+      <div class="sc b">
+        <div class="n">81</div>
+        <div class="l">Rivers dried up or extinct (RDRC 2025)</div>
+      </div>
+      <div class="sc p">
+        <div class="n">60×</div>
+        <div class="l">Chromium levels exceed WHO limits in Buriganga</div>
+      </div>
+    </div>
+    <div class="two" style="margin-top:26px">
+      <div class="gc">
+        <span class="ico">🏭</span>
+        <h4 style="color:var(--red);font-size:1.1rem;margin-bottom:8px">The Accountability Gap</h4>
+        <p style="font-size:.9rem">60% of Dhaka's river pollution comes from industry (IWM Study), yet among 2,500+
+          factories, <strong style="color:var(--text)">pinpointing the exact source is impossible</strong> without
+          spectral evidence — preventing any legal action.</p>
+        <div style="margin-top:12px"><span class="bd bd-r">No traceability</span> <span class="bd bd-r">Polluters
+            escape</span></div>
+      </div>
+      <div class="gc">
+        <span class="ico">🏗️</span>
+        <h4 style="color:var(--yellow);font-size:1.1rem;margin-bottom:8px">The Silent Encroachment (নদী দখল)</h4>
+        <p style="font-size:.9rem">40% of Dhaka riverbanks (Buriganga, Turag, Shitalakshya) seized by <strong
+            style="color:var(--text)">politically influential land grabbers</strong>. Filling happens so slowly it's
+          undetectable until floods devastate communities every monsoon.</p>
+        <div style="margin-top:12px"><span class="bd bd-y">Incremental &amp; invisible</span> <span class="bd bd-y">No
+            temporal data</span></div>
+      </div>
+    </div>
+    <p class="src">Sources: Finance Today (Jul 2024), bdnews24 / RDRC (Apr 2025), Financial Express (Aug 2025), IWM
+      Study, Buriganga Riverkeeper</p>
+  </div>
+
+  <!-- ══ SLIDE 3: STAKEHOLDERS ══ -->
+  <div class="slide" id="s3">
+    <span class="sn">03 / 11</span>
+    <h3>Stakeholders</h3>
+    <h2>Who Needs This <span class="gt">Solved?</span></h2>
+    <div class="three" style="margin-top:16px">
+      <div class="gc" style="text-align:center">
+        <span class="ico">🏛️</span>
+        <h4 style="color:var(--teal)">Primary: Government</h4>
+        <p style="font-size:.88rem"><strong style="color:var(--text)">Dept. of Environment (DoE)</strong> — needs
+          automated factory-level pollution tracking</p>
+        <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
+        <p style="font-size:.88rem"><strong style="color:var(--text)">NRCC</strong> — must monitor 1,400+ rivers for
+          encroachment, currently relies on manual field visits</p>
+      </div>
+      <div class="gc" style="text-align:center">
+        <span class="ico">🏦</span>
+        <h4 style="color:var(--blue)">Secondary: Financial</h4>
+        <p style="font-size:.88rem"><strong style="color:var(--text)">Banks &amp; Financial Institutions</strong> —
+          Bangladesh Bank mandates "Green Banking" compliance; banks need automated due diligence to deny loans to
+          flagged polluters</p>
+      </div>
+      <div class="gc" style="text-align:center">
+        <span class="ico">⚖️</span>
+        <h4 style="color:var(--purple)">Legal Bodies</h4>
+        <p style="font-size:.88rem"><strong style="color:var(--text)">Environmental Courts</strong> — desperate for
+          admissible time-series satellite evidence to prosecute polluters and land grabbers</p>
+        <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
+        <p style="font-size:.88rem"><strong style="color:var(--text)">9M+ citizens</strong> in flood-prone Dhaka
+          directly affected</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 4: SOLUTION ══ -->
+  <div class="slide" id="s4">
+    <span class="sn">04 / 11</span>
+    <h3>② Proposed Solution</h3>
+    <h2>Introducing <span class="gt">NodiWatch</span></h2>
+    <div class="two" style="margin-top:8px">
+      <div>
+        <p style="font-size:1.1rem;color:var(--text);margin-bottom:20px">An AI-powered satellite surveillance system
+          that transforms <strong style="color:var(--teal)">10 years of free satellite imagery</strong> into actionable
+          enforcement intelligence.</p>
+        <ul class="fl">
+          <li><span class="li">🎯</span>
+            <div><strong style="color:var(--text)">Pollution Fingerprinting</strong><br><span
+                style="font-size:.88rem">Classify polluter type — textile dye, tannery, thermal — via multispectral
+                indices (NDTI, NDWI, thermal bands)</span></div>
+          </li>
+          <li><span class="li">📐</span>
+            <div><strong style="color:var(--text)">Encroachment Detection</strong><br><span
+                style="font-size:.88rem">Compare 2016 vs 2026 water boundaries using CNN segmentation to detect illegal
+                land filling</span></div>
+          </li>
+          <li><span class="li">📊</span>
+            <div><strong style="color:var(--text)">Probabilistic Attribution</strong><br><span
+                style="font-size:.88rem">Rank nearby factories by likelihood using Bayesian model + OpenStreetMap
+                geolocation</span></div>
+          </li>
+          <li><span class="li">🚨</span>
+            <div><strong style="color:var(--text)">Real-time Alerts</strong><br><span style="font-size:.88rem">Automated
+                notifications when pollution spikes or encroachment exceeds 10% of baseline width</span></div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="imgf"><img src="assets/polluted_river.png" alt="Satellite view of polluted river"></div>
+        <p class="src" style="margin-top:8px">River pollution visible from satellite — NodiWatch identifies the
+          <em>source</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 5: AI TECHNOLOGY ══ -->
+  <div class="slide" id="s5">
+    <span class="sn">05 / 11</span>
+    <h3>③ AI / Modern Technology</h3>
+    <h2>Three-Layer <span class="gt">AI Intelligence</span></h2>
+    <div class="pipe">
+      <div class="ps">
+        <div class="pi">🛰️</div>
+        <div class="pl">Sentinel-2 &amp;<br>Landsat</div>
+      </div>
+      <div class="pa">→</div>
+      <div class="ps">
+        <div class="pi">☁️</div>
+        <div class="pl">Google Earth<br>Engine</div>
+      </div>
+      <div class="pa">→</div>
+      <div class="ps">
+        <div class="pi">🧠</div>
+        <div class="pl">AI Models</div>
+      </div>
+      <div class="pa">→</div>
+      <div class="ps">
+        <div class="pi">🗄️</div>
+        <div class="pl">PostGIS</div>
+      </div>
+      <div class="pa">→</div>
+      <div class="ps">
+        <div class="pi">📊</div>
+        <div class="pl">Dashboard<br>(React/Next.js)</div>
+      </div>
+      <div class="pa">→</div>
+      <div class="ps">
+        <div class="pi">📝</div>
+        <div class="pl">Evidence<br>Reports</div>
+      </div>
+    </div>
+    <div class="three" style="margin-top:18px">
+      <div class="gc">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span class="bd bd-t">LAYER 1</span>
+          <h4 style="color:var(--text);margin:0;font-size:.95rem">CNN Segmentation</h4>
+        </div>
+        <p style="font-size:.85rem">Deep learning identifies water pixels from satellite tiles, tracks river boundary
+          changes over 10 years</p>
+        <div style="margin-top:10px;font-size:.78rem"><strong style="color:var(--teal)">→</strong> River boundary
+          polygons → encroachment detection</div>
+      </div>
+      <div class="gc">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span class="bd bd-b">LAYER 2</span>
+          <h4 style="color:var(--text);margin:0;font-size:.95rem">Random Forest Classifier</h4>
+        </div>
+        <p style="font-size:.85rem">Trained on labeled spectral signatures: textile (high Red/Blue), tannery (high
+          NDTI), thermal (temperature spikes)</p>
+        <div style="margin-top:10px;font-size:.78rem"><strong style="color:var(--blue)">→</strong> Pollution type +
+          severity classification</div>
+      </div>
+      <div class="gc">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span class="bd bd-p">LAYER 3</span>
+          <h4 style="color:var(--text);margin:0;font-size:.95rem">Bayesian Attribution</h4>
+        </div>
+        <p style="font-size:.85rem">Queries OSM industry data within 500m, weighs distance + pollution pattern +
+          industry type</p>
+        <div style="margin-top:10px;font-size:.78rem"><strong style="color:var(--purple)">→</strong> "Textile Mill A:
+          78%, Tannery B: 22%"</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;justify-content:center">
+      <span class="bd bd-t">TensorFlow</span><span class="bd bd-b">Scikit-learn</span><span class="bd bd-p">Google Earth
+        Engine</span><span class="bd bd-y">PostGIS</span><span class="bd bd-t">React/Next.js</span><span
+        class="bd bd-b">OpenStreetMap API</span><span class="bd bd-p">Python</span>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 6: FEATURES — DASHBOARD + ENCROACHMENT ══ -->
+  <div class="slide" id="s6">
+    <span class="sn">06 / 11</span>
+    <h3>④ Features &amp; Applicability</h3>
+    <h2>Dual Heatmap <span class="gt">Command Center</span></h2>
+    <div class="two" style="margin-top:8px">
+      <div>
+        <div class="imgf"><img src="assets/dashboard_mockup.png" alt="NodiWatch Dashboard"></div>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <div class="gc" style="flex:1;padding:14px 16px;text-align:center">
+            <span style="color:var(--red);font-size:1.1rem">🔴</span>
+            <div style="font-size:.8rem;font-weight:600;margin-top:4px">Pollution Layer</div>
+          </div>
+          <div class="gc" style="flex:1;padding:14px 16px;text-align:center">
+            <span style="color:var(--yellow);font-size:1.1rem">🟡</span>
+            <div style="font-size:.8rem;font-weight:600;margin-top:4px">Encroachment Layer</div>
+          </div>
+          <div class="gc" style="flex:1;padding:14px 16px;text-align:center">
+            <span style="color:var(--teal);font-size:1.1rem">📋</span>
+            <div style="font-size:.8rem;font-weight:600;margin-top:4px">Evidence Reports</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgf"><img src="assets/encroachment_comparison.png" alt="River 2016 vs 2026"></div>
+        <div class="gc" style="margin-top:14px;padding:16px">
+          <h4 style="color:var(--yellow);font-size:.9rem;margin-bottom:6px">⚠️ Encroachment Evidence — 10 Years</h4>
+          <p style="font-size:.82rem">Sentinel-2 provides <strong style="color:var(--text)">10m resolution</strong> —
+            river width shrinkage from 300m → 120m documented automatically as court-ready evidence</p>
+        </div>
+        <div class="gc" style="margin-top:10px;padding:16px">
+          <h4 style="color:var(--purple);font-size:.9rem;margin-bottom:6px">📸 Citizen Ground-Truth</h4>
+          <p style="font-size:.82rem">Community photo uploads validate satellite findings — bridging the gap between
+            space and street</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 7: MARKET OPPORTUNITY ══ -->
+  <div class="slide" id="s7">
+    <span class="sn">07 / 11</span>
+    <h3>⑤ Market Opportunity</h3>
+    <h2>A Massive, <span class="gt">Untapped Market</span></h2>
+    <div class="sg" style="margin-top:16px">
+      <div class="sc b">
+        <div class="n">1,400+</div>
+        <div class="l">Rivers to monitor nationwide</div>
+      </div>
+      <div class="sc t">
+        <div class="n">2,500+</div>
+        <div class="l">Industrial units on Dhaka rivers</div>
+      </div>
+      <div class="sc y">
+        <div class="n">₹1.2T</div>
+        <div class="l">Bangladesh textile export industry</div>
+      </div>
+      <div class="sc p">
+        <div class="n">0</div>
+        <div class="l">Automated monitoring systems today</div>
+      </div>
+    </div>
+    <div class="two" style="margin-top:24px">
+      <div class="gc">
+        <h4 style="color:var(--teal);margin-bottom:10px">B2G — Government</h4>
+        <p style="font-size:.88rem">DoE currently sends inspectors manually. NodiWatch replaces reactive inspections
+          with <strong style="color:var(--text)">AI-prioritized enforcement</strong> — saving millions in operational
+          costs and inspector safety risks.</p>
+        <div style="margin-top:10px"><span class="bd bd-t">DoE</span> <span class="bd bd-t">NRCC</span> <span
+            class="bd bd-t">Land Authorities</span></div>
+      </div>
+      <div class="gc">
+        <h4 style="color:var(--blue);margin-bottom:10px">B2B — Financial &amp; Legal</h4>
+        <p style="font-size:.88rem">Bangladesh Bank mandates Green Banking compliance. Banks need <strong
+            style="color:var(--text)">automated environmental risk scoring</strong> during loan processing. Courts need
+          time-series evidence for prosecution.</p>
+        <div style="margin-top:10px"><span class="bd bd-b">Banks</span> <span class="bd bd-b">Environmental
+            Courts</span> <span class="bd bd-b">NGOs</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 8: BUSINESS MODEL ══ -->
+  <div class="slide" id="s8">
+    <span class="sn">08 / 11</span>
+    <h3>⑥ Business Model</h3>
+    <h2>Sustainable <span class="gt">Revenue Streams</span></h2>
+    <div class="bmr">
+      <div class="bmc">
+        <span class="bd bd-t" style="margin-bottom:10px">TIER 1 — B2G</span>
+        <h4 style="color:var(--text)">Government SaaS License</h4>
+        <div class="pr">৳ 15 Lakh/yr</div>
+        <p>Annual subscription for DoE &amp; NRCC. Full dashboard, unlimited evidence reports, automated alerts, API
+          access. Covers regional river monitoring.</p>
+      </div>
+      <div class="bmc">
+        <span class="bd bd-b" style="margin-bottom:10px">TIER 2 — B2B</span>
+        <h4 style="color:var(--text)">Green Banking API</h4>
+        <div class="pr">Pay-per-query</div>
+        <p>Banks query NodiWatch API during loan processing. Returns factory pollution risk score + historical violation
+          data. Automates Bangladesh Bank's Green Banking requirements.</p>
+      </div>
+      <div class="bmc">
+        <span class="bd bd-p" style="margin-bottom:10px">TIER 3 — GLOBAL</span>
+        <h4 style="color:var(--text)">Data Licensing &amp; Research</h4>
+        <div class="pr">Custom Pricing</div>
+        <p>Licensed access for international organizations (UNDP, World Bank, ADB) and research institutions studying
+          South Asian river ecosystems.</p>
+      </div>
+    </div>
+    <div class="gc"
+      style="margin-top:20px;padding:16px;text-align:center;background:linear-gradient(135deg,rgba(6,214,160,.06),rgba(17,138,178,.06))">
+      <p style="font-size:.92rem">💡 <strong style="color:var(--teal)">Key Cost Advantage:</strong> Sentinel-2 &amp;
+        Landsat data are <strong style="color:var(--text)">completely free</strong> — publicly funded satellite
+        programs. Our primary costs are compute (GEE is free for research) and engineering talent.</p>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 9: IMPACT ══ -->
+  <div class="slide" id="s9">
+    <span class="sn">09 / 11</span>
+    <h3>⑦ Environmental &amp; Social Impact</h3>
+    <h2>Transforming River <span class="gt">Protection</span></h2>
+    <div class="ig" style="margin-top:16px">
+      <div class="ic"><span class="ii">⚖️</span>
+        <div>
+          <h4 style="color:var(--teal)">Dual Enforcement</h4>
+          <p>One platform catches both polluters <strong>and</strong> land grabbers simultaneously — no duplicate
+            systems, no wasted resources</p>
+        </div>
+      </div>
+      <div class="ic"><span class="ii">📜</span>
+        <div>
+          <h4 style="color:var(--blue)">Court-Ready Evidence</h4>
+          <p>10-year satellite comparison creates legal-grade proof of river narrowing — transforming prosecution with
+            irrefutable spatial data</p>
+        </div>
+      </div>
+      <div class="ic"><span class="ii">🌊</span>
+        <div>
+          <h4 style="color:var(--yellow)">Urban Flood Prevention</h4>
+          <p>Identifying encroached river sections guides targeted restoration — directly protecting 9M+ Dhaka residents
+            from monsoon flooding</p>
+        </div>
+      </div>
+      <div class="ic"><span class="ii">🎯</span>
+        <div>
+          <h4 style="color:var(--purple)">Smart Enforcement</h4>
+          <p>AI risk scores direct inspectors to <strong>highest-risk factories first</strong> — saving time, reducing
+            danger, maximizing impact per inspection</p>
+        </div>
+      </div>
+    </div>
+    <div class="sg" style="margin-top:20px">
+      <div class="sc t">
+        <div class="n">1,400+</div>
+        <div class="l">Rivers can be monitored</div>
+      </div>
+      <div class="sc b">
+        <div class="n">10yr</div>
+        <div class="l">Historical evidence depth</div>
+      </div>
+      <div class="sc y">
+        <div class="n">24/7</div>
+        <div class="l">Automated surveillance</div>
+      </div>
+      <div class="sc p">
+        <div class="n">10m</div>
+        <div class="l">Spatial resolution</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 10: ROADMAP ══ -->
+  <div class="slide" id="s10">
+    <span class="sn">10 / 11</span>
+    <h3>⑧ Prototype &amp; Roadmap</h3>
+    <h2>From Concept to <span class="gt">Impact</span></h2>
+    <p style="text-align:center;margin-bottom:8px">Current Stage: <span class="bd bd-t">Early Prototype — GEE Pipeline
+        Validated</span></p>
+    <div class="rm">
+      <div class="ri">
+        <div class="dot"></div>
+        <h4 style="color:var(--teal)">Phase 1 — Q1'26</h4>
+        <p>GEE data pipeline<br>CNN water segmentation<br>Baseline river boundary maps</p>
+      </div>
+      <div class="ri">
+        <div class="dot"></div>
+        <h4 style="color:var(--blue)">Phase 2 — Q2'26</h4>
+        <p>Spectral fingerprinting<br>Random Forest classifier<br>Pollution type classification</p>
+      </div>
+      <div class="ri">
+        <div class="dot"></div>
+        <h4 style="color:var(--purple)">Phase 3 — Q3'26</h4>
+        <p>React/Next.js dashboard<br>Dual heatmap visualization<br>Automated alert system</p>
+      </div>
+      <div class="ri">
+        <div class="dot"></div>
+        <h4 style="color:var(--yellow)">Phase 4 — Q4'26</h4>
+        <p>DoE/NRCC pilot program<br>Green Banking API launch<br>Citizen validation module</p>
+      </div>
+    </div>
+    <div class="two" style="margin-top:26px">
+      <div class="gc" style="text-align:center">
+        <h4 style="color:var(--red);margin-bottom:6px;font-size:.9rem">Challenges We're Addressing</h4>
+        <p style="font-size:.82rem">• Cloud cover gaps → multi-year composite imaging<br>• Mixed industrial signals →
+          ground validation + citizen photos<br>• Flash flood false positives → context-aware temporal filtering<br>•
+          Legal calibration → land record cross-referencing</p>
+      </div>
+      <div class="gc" style="text-align:center">
+        <h4 style="color:var(--teal);margin-bottom:6px;font-size:.9rem">Scalability Path</h4>
+        <p style="font-size:.82rem">🔹 <strong>Start:</strong> 5 critical segments — Buriganga, Turag,
+          Shitalakshya<br>🔹 <strong>Scale:</strong> All 1,400+ rivers in Bangladesh<br>🔹 <strong>Expand:</strong>
+          South &amp; Southeast Asian river systems (India, Myanmar, Vietnam)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 11: TEAM + CLOSING ══ -->
+  <div class="slide" id="s11" style="text-align:center">
+    <span class="sn">11 / 11</span>
+    <h3>⑨ Team AlphaVerse</h3>
+    <h2>The Team Behind <span class="gt">NodiWatch</span></h2>
+    <div class="three" style="margin-top:20px;max-width:850px;margin-left:auto;margin-right:auto">
+      <div class="tc">
+        <div class="av">M1</div>
+        <div class="nm">Member 1</div>
+        <div class="rl">AI / ML Lead</div>
+        <div class="ds">CNN &amp; Random Forest models, spectral analysis, TensorFlow pipeline</div>
+      </div>
+      <div class="tc">
+        <div class="av" style="background:linear-gradient(135deg,var(--blue),var(--purple))">M2</div>
+        <div class="nm">Member 2</div>
+        <div class="rl">Full-Stack Developer</div>
+        <div class="ds">React/Next.js dashboard, PostGIS integration, Green Banking API</div>
+      </div>
+      <div class="tc">
+        <div class="av" style="background:linear-gradient(135deg,var(--purple),var(--red))">M3</div>
+        <div class="nm">Member 3</div>
+        <div class="rl">GIS &amp; Data Lead</div>
+        <div class="ds">Google Earth Engine, satellite data processing, geospatial analysis</div>
+      </div>
+    </div>
+    <div style="margin-top:36px">
+      <h1 style="font-size:2.4rem;margin-bottom:10px">Let's <span class="gt">Protect Our Rivers</span> — From Space</h1>
+      <p style="font-size:1rem;color:var(--muted);margin-bottom:18px">With NodiWatch, we aren't just watching the rivers
+        — <strong style="color:var(--text)">we're giving them a voice in court.</strong></p>
+      <div class="tg">🛰️ Thank You — Innovate for Green</div>
+    </div>
+  </div>
+
+  <!-- ══ NAV ══ -->
+  <div class="nav">
+    <button class="nb" onclick="go(-1)">‹</button>
+    <div class="nd" id="dots"></div>
+    <button class="nb" onclick="go(1)">›</button>
+  </div>
+
+  <script>
+    const S = document.querySelectorAll('.slide'), D = document.getElementById('dots');
+    let c = 0;
+    S.forEach((_, i) => { const d = document.createElement('div'); d.className = 'd' + (i === 0 ? ' active' : ''); d.onclick = () => jump(i); D.appendChild(d) });
+    function jump(n) { S[c].classList.remove('active'); D.children[c].classList.remove('active'); c = n; S[c].classList.add('active'); D.children[c].classList.add('active') }
+    function go(d) { const n = c + d; if (n >= 0 && n < S.length) jump(n) }
+    document.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(1) } if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1) } if (e.key === 'f') { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen() } });
+    let tx = 0; document.addEventListener('touchstart', e => tx = e.touches[0].clientX); document.addEventListener('touchend', e => { const d = tx - e.changedTouches[0].clientX; if (Math.abs(d) > 50) go(d > 0 ? 1 : -1) });
+  </script>
+</body>
+
+</html>

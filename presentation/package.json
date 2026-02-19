@@ -1,0 +1,13 @@
+{
+  "name": "presentation-pdf-converter",
+  "version": "1.0.0",
+  "description": "Convert HTML presentation to PDF",
+  "main": "convert_to_pdf.js",
+  "scripts": {
+    "convert": "node convert_to_pdf.js"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.0.0"
+  }
+}

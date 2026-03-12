@@ -17,6 +17,7 @@ export default function Navigation() {
     { name: 'Erosion', href: '/erosion' },
     { name: 'Analysis', href: '/analysis' },
     { name: 'Reports', href: '/reports' },
+    { name: 'Datasets', href: '/datasets' },
     { name: 'About', href: '/about' },
   ]
 

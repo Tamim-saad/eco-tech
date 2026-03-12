@@ -28,8 +28,13 @@ export default function Dashboard() {
       fetch('/data/factories.json').then(r => r.json()),
       fetch('/data/encroachment.json').then(r => r.json()),
       fetch('/data/rivers.geojson').then(r => r.json())
-    ]).then(([pollution, factories, encroachment, rivers]) => {
-      setData({ pollution, factories, encroachment, rivers })
+    ]).then(([pollutionData, factoriesData, encroachmentData, rivers]) => {
+      setData({ 
+        pollution: pollutionData.hotspots || [], 
+        factories: factoriesData.factories || [], 
+        encroachment: encroachmentData.segments || [], 
+        rivers 
+      })
       setLoading(false)
     }).catch(error => {
       console.error('Error loading data:', error)
@@ -41,7 +46,7 @@ export default function Dashboard() {
   const stats = [
     {
       title: 'Active Alerts',
-      value: data.pollution.filter((p: any) => p.severity === 'High').length + data.encroachment.length,
+      value: data.pollution.filter((p: any) => p.severity >= 80).length + data.encroachment.length,
       change: '+12%',
       trend: 'up',
       icon: <AlertTriangle className="w-5 h-5" />,
@@ -75,11 +80,11 @@ export default function Dashboard() {
 
   // Recent alerts combining pollution and encroachment
   const recentAlerts = [
-    ...data.pollution.filter((p: any) => p.severity === 'High').slice(0, 3).map((p: any) => ({
+    ...data.pollution.filter((p: any) => p.severity >= 80).slice(0, 3).map((p: any) => ({
       id: p.id,
       type: 'Pollution',
-      location: p.location,
-      severity: p.severity,
+      location: `${p.river} - ${p.label}`,
+      severity: 'High',
       time: '2 hours ago',
       icon: <Droplets className="w-4 h-4" />,
       color: 'red'

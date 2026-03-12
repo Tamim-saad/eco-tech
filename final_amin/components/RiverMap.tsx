@@ -118,7 +118,7 @@ export default function RiverMap({ data, activeLayer }: RiverMapProps) {
         {shouldShow('pollution') && data.pollution.map((point) => (
           <Marker
             key={point.id}
-            position={[point.coordinates.lat, point.coordinates.lng]}
+            position={[point.lat, point.lng]}
             icon={pollutionIcon}
           >
             <Popup>
@@ -130,27 +130,19 @@ export default function RiverMap({ data, activeLayer }: RiverMapProps) {
                   <div>
                     <p className="font-semibold text-sm">Pollution Hotspot</p>
                     <span className={`text-xs px-2 py-0.5 rounded ${
-                      point.severity === 'High' ? 'bg-red-500/20 text-red-600' :
-                      point.severity === 'Medium' ? 'bg-yellow-500/20 text-yellow-600' :
+                      point.severity >= 80 ? 'bg-red-500/20 text-red-600' :
+                      point.severity >= 60 ? 'bg-yellow-500/20 text-yellow-600' :
                       'bg-green-500/20 text-green-600'
                     }`}>
-                      {point.severity}
+                      {point.severity >= 80 ? 'High' : point.severity >= 60 ? 'Medium' : 'Low'} ({point.severity})
                     </span>
                   </div>
                 </div>
-                <p className="text-sm mb-1"><strong>Location:</strong> {point.location}</p>
-                <p className="text-sm mb-1"><strong>NDTI:</strong> {point.ndti}</p>
-                <p className="text-sm mb-1"><strong>Last Updated:</strong> {point.timestamp}</p>
-                {point.probableSources && (
-                  <div className="mt-2">
-                    <p className="text-xs font-semibold mb-1">Probable Sources:</p>
-                    {point.probableSources.map((source: any, idx: number) => (
-                      <p key={idx} className="text-xs">
-                        • {source.name} ({source.probability}%)
-                      </p>
-                    ))}
-                  </div>
-                )}
+                <p className="text-sm mb-1"><strong>Location:</strong> {point.river} - {point.label}</p>
+                <p className="text-sm mb-1"><strong>Type:</strong> {point.type}</p>
+                <p className="text-sm mb-1"><strong>NDTI:</strong> {point.spectral?.ndti}</p>
+                <p className="text-sm mb-1"><strong>Detected:</strong> {point.detected}</p>
+                <p className="text-sm text-gray-600">{point.description}</p>
               </div>
             </Popup>
           </Marker>
@@ -160,7 +152,7 @@ export default function RiverMap({ data, activeLayer }: RiverMapProps) {
         {shouldShow('factories') && data.factories.map((factory) => (
           <Marker
             key={factory.id}
-            position={[factory.coordinates.lat, factory.coordinates.lng]}
+            position={[factory.lat, factory.lng]}
             icon={factoryIcon}
           >
             <Popup>
@@ -174,12 +166,16 @@ export default function RiverMap({ data, activeLayer }: RiverMapProps) {
                 <p className="text-sm mb-1"><strong>Name:</strong> {factory.name}</p>
                 <p className="text-sm mb-1"><strong>Type:</strong> {factory.type}</p>
                 <p className="text-sm mb-1"><strong>Status:</strong> {factory.status}</p>
-                {factory.etp && (
-                  <p className="text-sm mb-1">
-                    <strong>ETP:</strong>{' '}
-                    <span className={factory.etp === 'Active' ? 'text-green-600' : 'text-red-600'}>
-                      {factory.etp}
-                    </span>
+                <p className="text-sm mb-1"><strong>Distance:</strong> {factory.distance_m}m from hotspot</p>
+                <p className="text-sm mb-1">
+                  <strong>Attribution:</strong>{' '}
+                  <span className={factory.attribution >= 70 ? 'text-red-600' : 'text-yellow-600'}>
+                    {factory.attribution}%
+                  </span>
+                </p>
+                {factory.violations > 0 && (
+                  <p className="text-sm mb-1 text-red-600">
+                    <strong>Violations:</strong> {factory.violations}
                   </p>
                 )}
               </div>
@@ -191,7 +187,7 @@ export default function RiverMap({ data, activeLayer }: RiverMapProps) {
         {shouldShow('encroachment') && data.encroachment.map((zone) => (
           <Marker
             key={zone.id}
-            position={[zone.coordinates.lat, zone.coordinates.lng]}
+            position={[zone.lat, zone.lng]}
             icon={encroachmentIcon}
           >
             <Popup>
@@ -203,13 +199,25 @@ export default function RiverMap({ data, activeLayer }: RiverMapProps) {
                   <p className="font-semibold text-sm">Encroachment Zone</p>
                 </div>
                 <p className="text-sm mb-1"><strong>Location:</strong> {zone.location}</p>
-                <p className="text-sm mb-1"><strong>Area:</strong> {zone.area}</p>
-                <p className="text-sm mb-1"><strong>Detected:</strong> {zone.detected}</p>
-                {zone.widthLoss && (
-                  <p className="text-sm mb-1">
-                    <strong>Width Loss:</strong> <span className="text-red-600">{zone.widthLoss}</span>
-                  </p>
-                )}
+                <p className="text-sm mb-1"><strong>River:</strong> {zone.river}</p>
+                <p className="text-sm mb-1">
+                  <strong>Width Loss:</strong>{' '}
+                  <span className="text-red-600">
+                    {zone.width_2016 - zone.width_2026}m ({zone.shrinkage_pct.toFixed(1)}%)
+                  </span>
+                </p>
+                <p className="text-sm mb-1">
+                  <strong>Width 2016:</strong> {zone.width_2016}m → <strong>2026:</strong> {zone.width_2026}m
+                </p>
+                <p className="text-sm">
+                  <span className={`px-2 py-0.5 rounded text-xs ${
+                    zone.severity === 'critical' ? 'bg-red-500/20 text-red-600' :
+                    zone.severity === 'high' ? 'bg-orange-500/20 text-orange-600' :
+                    'bg-yellow-500/20 text-yellow-600'
+                  }`}>
+                    {zone.severity.toUpperCase()}
+                  </span>
+                </p>
               </div>
             </Popup>
           </Marker>

@@ -7,6 +7,7 @@ import { Droplets, Factory, AlertTriangle, TrendingUp, Eye, FileText } from 'luc
 
 const RiverMap = dynamic(() => import('@/components/RiverMap'), { ssr: false })
 const PollutionChart = dynamic(() => import('@/components/PollutionChart'), { ssr: false })
+const AIAnalyzer = dynamic(() => import('@/components/AIAnalyzer'), { ssr: false })
 
 export default function PollutionPage() {
   const [data, setData] = useState<any>({ pollution: [], factories: [], encroachment: [], rivers: null })
@@ -18,8 +19,16 @@ export default function PollutionPage() {
       fetch('/data/factories.json').then(r => r.json()),
       fetch('/data/encroachment.json').then(r => r.json()),
       fetch('/data/rivers.geojson').then(r => r.json())
-    ]).then(([pollution, factories, encroachment, rivers]) => {
-      setData({ pollution, factories, encroachment, rivers })
+    ]).then(([pollutionData, factoriesData, encroachmentData, rivers]) => {
+      setData({ 
+        pollution: pollutionData.hotspots || [], 
+        factories: factoriesData.factories || [], 
+        encroachment: encroachmentData.segments || [], 
+        rivers 
+      })
+      setLoading(false)
+    }).catch(error => {
+      console.error('Error loading data:', error)
       setLoading(false)
     })
   }, [])
@@ -33,7 +42,7 @@ export default function PollutionPage() {
     },
     {
       title: 'High Severity',
-      value: data.pollution.filter((p: any) => p.severity === 'High').length,
+      value: data.pollution.filter((p: any) => p.severity >= 80).length,
       color: 'red',
       icon: <AlertTriangle className="w-5 h-5" />
     },
@@ -183,6 +192,15 @@ export default function PollutionPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* AI Analyzer */}
+        <div className="mb-12">
+          <AIAnalyzer
+            analysisType="pollution"
+            title="AI-Powered Pollution Detection"
+            description="Upload a satellite image to detect pollution type, severity, and get AI-generated recommendations using Gemini Vision"
+          />
         </div>
 
         {/* Evidence Image */}

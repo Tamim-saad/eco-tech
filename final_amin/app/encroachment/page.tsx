@@ -17,8 +17,16 @@ export default function EncroachmentPage() {
       fetch('/data/factories.json').then(r => r.json()),
       fetch('/data/encroachment.json').then(r => r.json()),
       fetch('/data/rivers.geojson').then(r => r.json())
-    ]).then(([pollution, factories, encroachment, rivers]) => {
-      setData({ pollution, factories, encroachment, rivers })
+    ]).then(([pollutionData, factoriesData, encroachmentData, rivers]) => {
+      setData({ 
+        pollution: pollutionData.hotspots || [], 
+        factories: factoriesData.factories || [], 
+        encroachment: encroachmentData.segments || [], 
+        rivers 
+      })
+      setLoading(false)
+    }).catch(error => {
+      console.error('Error loading data:', error)
       setLoading(false)
     })
   }, [])

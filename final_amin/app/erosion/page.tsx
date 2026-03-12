@@ -1,7 +1,17 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { Mountain, Users, Home, TrendingUp, Eye, Waves, MapPin, FileText } from 'lucide-react'
+
+const ErosionMap = dynamic(() => import('@/components/ErosionMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="glass-card overflow-hidden flex items-center justify-center" style={{ height: "550px" }}>
+      <p className="text-slate-400">Loading erosion map...</p>
+    </div>
+  ),
+})
 
 export default function ErosionPage() {
   const stats = [
@@ -163,6 +173,16 @@ export default function ErosionPage() {
               <p className="text-sm text-slate-400">{stat.title}</p>
             </div>
           ))}
+        </div>
+
+        {/* Erosion Risk Map */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-white mb-4">SAR-Based Erosion Risk Corridors</h2>
+          <p className="text-slate-400 mb-6">
+            Real-time erosion monitoring along Jamuna River using Sentinel-1 SAR analysis. 
+            Color-coded risk levels show critical zones (red) requiring immediate intervention.
+          </p>
+          <ErosionMap />
         </div>
 
         {/* Before/After Comparison */}

@@ -614,33 +614,111 @@ li {
 
 /* ── Print / PDF ── */
 @media print {
+
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
   body {
-    overflow: visible;
-    width: auto;
-    height: auto;
-    background: white;
+    overflow: visible !important;
+    width: 1440px !important;
+    height: auto !important;
+    background: var(--bg) !important;
   }
 
   .nav {
     display: none !important;
   }
 
+  /*
+   * CRITICAL FIX: Use display:block, NOT display:flex.
+   * Chromium print engine has a known bug where CSS grid children
+   * inside flex containers with align-items:center lose their
+   * width calculation, causing grid content to collapse to 0 width.
+   * display:block avoids this by letting grids inherit full width.
+   */
   .slide {
     position: relative !important;
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
-    page-break-after: always;
-    page-break-inside: avoid;
-    min-height: 100vh;
+    display: block !important;
+    width: 1440px !important;
+    min-height: 1080px !important;
+    height: auto !important;
+    overflow: visible !important;
     background: var(--bg) !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    padding: 50px 70px !important;
+    box-sizing: border-box !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    text-align: center !important;
   }
 
+  .slide:last-of-type {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Disable the ::before gradient overlay */
   .slide::before {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Remove z-index stacking */
+  .slide > * {
+    position: relative !important;
+    z-index: auto !important;
+  }
+
+  /* Force ALL children visible */
+  .slide *,
+  .slide *::before,
+  .slide *::after {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  /* Grid containers need explicit width since parent is now block */
+  .two, .three, .four,
+  [style*="grid-template-columns"],
+  .sg, .ig, .bmr, .rm, .pipe {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure images print */
+  .imgf img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Preserve glass card backgrounds */
+  .gc, .sc, .ic, .bmc, .tc, .ps {
+    background: var(--glass) !important;
+    border: 1px solid var(--border) !important;
+  }
+
+  /* Keep badge colors */
+  .bd-t { background: rgba(6, 214, 160, .15) !important; }
+  .bd-b { background: rgba(17, 138, 178, .15) !important; }
+  .bd-r { background: rgba(239, 71, 111, .15) !important; }
+  .bd-p { background: rgba(123, 47, 247, .15) !important; }
+  .bd-y { background: rgba(255, 209, 102, .15) !important; }
+
+  /* Title slide gradient tag */
+  .tg {
+    background: linear-gradient(135deg, var(--teal), var(--blue)) !important;
+    color: white !important;
   }
 }
 

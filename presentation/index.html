@@ -303,26 +303,33 @@
     <span class="sn">08 / 14</span>
     <h3>④ Evidence &amp; Ground Truth</h3>
     <h2>Satellite + <span class="gt">Citizen Validation</span></h2>
-    <div class="three" style="margin-top:8px">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px">
+      <div>
+        <div class="imgf"><img src="assets/pollution_comparison.png" alt="Pollution: Spectral analysis"></div>
+        <div class="gc" style="margin-top:12px;padding:12px">
+          <h4 style="color:var(--red);font-size:.82rem;margin-bottom:6px">🏭 Pollution Evidence (নদী দূষণ)</h4>
+          <p style="font-size:.74rem">Multispectral indices reveal <strong style="color:var(--text)">effluent type & source</strong>. Textile dye (Red/Blue), tannery (NDTI), chemical (SWIR). Each factory within 500m gets a probability score.</p>
+        </div>
+      </div>
       <div>
         <div class="imgf"><img src="assets/encroachment_comparison.png" alt="Encroachment: 2016 vs 2026"></div>
-        <div class="gc" style="margin-top:12px;padding:14px">
-          <h4 style="color:var(--yellow);font-size:.86rem;margin-bottom:6px">⚠️ Encroachment Evidence (নদী দখল)</h4>
-          <p style="font-size:.78rem">10-year satellite comparison: river width <strong style="color:var(--text)">300m → 120m</strong>. Land filling zones highlighted in red. Auto-generated as timestamped enforcement triage reports for DoE/NRCC field deployment.</p>
+        <div class="gc" style="margin-top:12px;padding:12px">
+          <h4 style="color:var(--yellow);font-size:.82rem;margin-bottom:6px">⚠️ Encroachment Evidence (নদী দখল)</h4>
+          <p style="font-size:.74rem">10-year satellite comparison: river width <strong style="color:var(--text)">300m → 120m</strong>. Land filling zones highlighted. Auto-generated as enforcement triage reports.</p>
         </div>
       </div>
       <div>
         <div class="imgf"><img src="assets/erosion_comparison.png" alt="Erosion: Riverbank collapse"></div>
-        <div class="gc" style="margin-top:12px;padding:14px">
-          <h4 style="color:var(--blue);font-size:.86rem;margin-bottom:6px">🌊 Erosion Detection (নদী ভাঙন)</h4>
-          <p style="font-size:.78rem">SAR + optical imagery reveals bank retreat. Orange zones show <strong style="color:var(--text)">eroded land</strong>. Alerts BWDB and DDM before communities lose homes. Guides embankment construction priority.</p>
+        <div class="gc" style="margin-top:12px;padding:12px">
+          <h4 style="color:var(--blue);font-size:.82rem;margin-bottom:6px">🌊 Erosion Detection (নদী ভাঙন)</h4>
+          <p style="font-size:.74rem">SAR + optical imagery reveals bank retreat. Orange zones show <strong style="color:var(--text)">eroded land</strong>. Alerts BWDB & DDM before communities lose homes.</p>
         </div>
       </div>
       <div>
         <div class="imgf"><img src="assets/citizen_ground_truth.png" alt="Citizen photo validation app"></div>
-        <div class="gc" style="margin-top:12px;padding:14px">
-          <h4 style="color:var(--purple);font-size:.86rem;margin-bottom:6px">📸 Citizen Ground-Truth</h4>
-          <p style="font-size:.78rem">Community members upload <strong style="color:var(--text)">geotagged photos</strong> of pollution, encroachment, or erosion. GPS-validated against satellite data. Bridges the gap between space and street.</p>
+        <div class="gc" style="margin-top:12px;padding:12px">
+          <h4 style="color:var(--purple);font-size:.82rem;margin-bottom:6px">📸 Citizen Ground-Truth</h4>
+          <p style="font-size:.74rem">Community members upload <strong style="color:var(--text)">geotagged photos</strong> of pollution, encroachment, or erosion. GPS-validated against satellite data.</p>
         </div>
       </div>
     </div>

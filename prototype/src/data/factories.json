@@ -1,0 +1,217 @@
+{
+  "factories": [
+    {
+      "id": "F-001",
+      "name": "Dhaka Dyeing & Finishing Ltd.",
+      "type": "textile",
+      "lat": 23.706,
+      "lng": 90.374,
+      "distance_m": 180,
+      "attribution": 78,
+      "violations": 3,
+      "status": "active",
+      "river": "Buriganga",
+      "hotspot": "HS-001"
+    },
+    {
+      "id": "F-002",
+      "name": "Bengal Textile Mills",
+      "type": "textile",
+      "lat": 23.707,
+      "lng": 90.378,
+      "distance_m": 320,
+      "attribution": 15,
+      "violations": 1,
+      "status": "active",
+      "river": "Buriganga",
+      "hotspot": "HS-001"
+    },
+    {
+      "id": "F-003",
+      "name": "Star Knit Composite",
+      "type": "textile",
+      "lat": 23.704,
+      "lng": 90.375,
+      "distance_m": 410,
+      "attribution": 7,
+      "violations": 0,
+      "status": "active",
+      "river": "Buriganga",
+      "hotspot": "HS-001"
+    },
+    {
+      "id": "F-004",
+      "name": "Hazaribagh Tannery Complex",
+      "type": "tannery",
+      "lat": 23.7,
+      "lng": 90.386,
+      "distance_m": 120,
+      "attribution": 82,
+      "violations": 7,
+      "status": "flagged",
+      "river": "Buriganga",
+      "hotspot": "HS-002"
+    },
+    {
+      "id": "F-005",
+      "name": "Apex Leather Ltd.",
+      "type": "tannery",
+      "lat": 23.698,
+      "lng": 90.39,
+      "distance_m": 250,
+      "attribution": 18,
+      "violations": 2,
+      "status": "active",
+      "river": "Buriganga",
+      "hotspot": "HS-002"
+    },
+    {
+      "id": "F-006",
+      "name": "Tongi Power Station",
+      "type": "thermal",
+      "lat": 23.862,
+      "lng": 90.351,
+      "distance_m": 90,
+      "attribution": 91,
+      "violations": 1,
+      "status": "active",
+      "river": "Turag",
+      "hotspot": "HS-004"
+    },
+    {
+      "id": "F-007",
+      "name": "Rainbow Garments Ltd.",
+      "type": "textile",
+      "lat": 23.841,
+      "lng": 90.355,
+      "distance_m": 150,
+      "attribution": 72,
+      "violations": 4,
+      "status": "flagged",
+      "river": "Turag",
+      "hotspot": "HS-005"
+    },
+    {
+      "id": "F-008",
+      "name": "Turag Dyeing Mills",
+      "type": "textile",
+      "lat": 23.839,
+      "lng": 90.359,
+      "distance_m": 280,
+      "attribution": 28,
+      "violations": 2,
+      "status": "active",
+      "river": "Turag",
+      "hotspot": "HS-005"
+    },
+    {
+      "id": "F-009",
+      "name": "Narayanganj Tanning Industries",
+      "type": "tannery",
+      "lat": 23.781,
+      "lng": 90.52,
+      "distance_m": 200,
+      "attribution": 68,
+      "violations": 5,
+      "status": "flagged",
+      "river": "Shitalakshya",
+      "hotspot": "HS-006"
+    },
+    {
+      "id": "F-010",
+      "name": "Sonargaon Textiles",
+      "type": "textile",
+      "lat": 23.761,
+      "lng": 90.525,
+      "distance_m": 170,
+      "attribution": 74,
+      "violations": 3,
+      "status": "active",
+      "river": "Shitalakshya",
+      "hotspot": "HS-007"
+    },
+    {
+      "id": "F-011",
+      "name": "Eastern Dyeing Complex",
+      "type": "textile",
+      "lat": 23.771,
+      "lng": 90.474,
+      "distance_m": 100,
+      "attribution": 86,
+      "violations": 6,
+      "status": "flagged",
+      "river": "Balu",
+      "hotspot": "HS-008"
+    },
+    {
+      "id": "F-012",
+      "name": "Balu Leather Processing",
+      "type": "tannery",
+      "lat": 23.751,
+      "lng": 90.482,
+      "distance_m": 180,
+      "attribution": 77,
+      "violations": 4,
+      "status": "flagged",
+      "river": "Balu",
+      "hotspot": "HS-009"
+    },
+    {
+      "id": "F-013",
+      "name": "Dhaleshwari Industrial Zone",
+      "type": "textile",
+      "lat": 23.712,
+      "lng": 90.318,
+      "distance_m": 350,
+      "attribution": 42,
+      "violations": 2,
+      "status": "active",
+      "river": "Dhaleshwari",
+      "hotspot": "HS-010"
+    }
+  ],
+  "zones": [
+    {
+      "id": "Z001",
+      "name": "Hazaribagh Zone A",
+      "type": "Tannery Cluster",
+      "ndti": 0.82,
+      "cdom": 3.7,
+      "factories": ["F-004", "F-005"],
+      "coordinates": [
+        [90.381, 23.704],
+        [90.391, 23.704],
+        [90.391, 23.694],
+        [90.381, 23.694]
+      ]
+    },
+    {
+      "id": "Z002",
+      "name": "Lalbagh Zone",
+      "type": "Textile Dye",
+      "ndti": 0.68,
+      "cdom": 2.1,
+      "factories": ["F-001", "F-002", "F-003"],
+      "coordinates": [
+        [90.37, 23.71],
+        [90.38, 23.71],
+        [90.38, 23.7],
+        [90.37, 23.7]
+      ]
+    },
+    {
+      "id": "Z003",
+      "name": "Tongi Zone",
+      "type": "Mixed Industrial",
+      "ndti": 0.72,
+      "cdom": 2.8,
+      "factories": ["F-006", "F-007", "F-008"],
+      "coordinates": [
+        [90.348, 23.865],
+        [90.362, 23.865],
+        [90.362, 23.835],
+        [90.348, 23.835]
+      ]
+    }
+  ]
+}

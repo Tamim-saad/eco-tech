@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buriganga River",
+        "id": "buriganga",
+        "nameBn": "বুড়িগঙ্গা নদী",
+        "status": "critical",
+        "width_2016": 320,
+        "width_2026": 180,
+        "shrinkage_pct": 43.75
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [90.365, 23.71],
+          [90.37, 23.708],
+          [90.376, 23.705],
+          [90.382, 23.702],
+          [90.388, 23.699],
+          [90.395, 23.696],
+          [90.402, 23.694],
+          [90.41, 23.692],
+          [90.418, 23.69],
+          [90.425, 23.688],
+          [90.433, 23.687],
+          [90.44, 23.686]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Turag River",
+        "id": "turag",
+        "nameBn": "তুরাগ নদী",
+        "status": "severe",
+        "width_2016": 280,
+        "width_2026": 120,
+        "shrinkage_pct": 57.14
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [90.34, 23.89],
+          [90.345, 23.88],
+          [90.35, 23.87],
+          [90.353, 23.86],
+          [90.355, 23.85],
+          [90.357, 23.84],
+          [90.36, 23.83],
+          [90.362, 23.82],
+          [90.364, 23.81],
+          [90.366, 23.8],
+          [90.368, 23.79]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shitalakshya River",
+        "id": "shitalakshya",
+        "nameBn": "শীতলক্ষ্যা নদী",
+        "status": "moderate",
+        "width_2016": 400,
+        "width_2026": 300,
+        "shrinkage_pct": 25.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [90.51, 23.82],
+          [90.515, 23.81],
+          [90.518, 23.8],
+          [90.52, 23.79],
+          [90.522, 23.78],
+          [90.525, 23.77],
+          [90.527, 23.76],
+          [90.528, 23.75],
+          [90.53, 23.74],
+          [90.532, 23.73],
+          [90.534, 23.72]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Balu River",
+        "id": "balu",
+        "nameBn": "বালু নদী",
+        "status": "critical",
+        "width_2016": 200,
+        "width_2026": 80,
+        "shrinkage_pct": 60.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [90.47, 23.81],
+          [90.472, 23.8],
+          [90.474, 23.79],
+          [90.475, 23.78],
+          [90.476, 23.77],
+          [90.478, 23.76],
+          [90.48, 23.75],
+          [90.481, 23.74]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dhaleshwari River",
+        "id": "dhaleshwari",
+        "nameBn": "ধলেশ্বরী নদী",
+        "status": "moderate",
+        "width_2016": 500,
+        "width_2026": 410,
+        "shrinkage_pct": 18.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [90.28, 23.72],
+          [90.29, 23.715],
+          [90.3, 23.71],
+          [90.31, 23.706],
+          [90.32, 23.703],
+          [90.33, 23.701],
+          [90.34, 23.7],
+          [90.35, 23.699],
+          [90.36, 23.698]
+        ]
+      }
+    }
+  ]
+}

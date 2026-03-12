@@ -1,0 +1,144 @@
+{
+  "corridors": [
+    {
+      "id": "E001",
+      "name": "Sadarghat Erosion Zone",
+      "river": "Buriganga",
+      "risk_level": "high",
+      "retreat_rate_m_year": 12.5,
+      "total_retreat_m": 125,
+      "population_at_risk": 2400,
+      "structures_at_risk": 150,
+      "coordinates": [
+        [90.4167, 23.7102],
+        [90.4175, 23.7098],
+        [90.4182, 23.7092],
+        [90.4188, 23.7088],
+        [90.4192, 23.7082],
+        [90.4195, 23.7075],
+        [90.4193, 23.7068],
+        [90.4188, 23.7062]
+      ],
+      "buffer_zone": {
+        "warning_m": 50,
+        "critical_m": 25
+      },
+      "analysis": {
+        "sar_coherence": 0.42,
+        "ndvi_change": -0.35,
+        "slope_degrees": 8.5,
+        "soil_moisture": 78
+      },
+      "last_updated": "2026-03-10",
+      "trend": "accelerating"
+    },
+    {
+      "id": "E002",
+      "name": "Gabtali Riverbank",
+      "river": "Turag",
+      "risk_level": "medium",
+      "retreat_rate_m_year": 8.2,
+      "total_retreat_m": 82,
+      "population_at_risk": 850,
+      "structures_at_risk": 45,
+      "coordinates": [
+        [90.3541, 23.7949],
+        [90.3545, 23.7945],
+        [90.355, 23.794],
+        [90.3556, 23.7935],
+        [90.356, 23.793],
+        [90.3563, 23.7925]
+      ],
+      "buffer_zone": {
+        "warning_m": 40,
+        "critical_m": 20
+      },
+      "analysis": {
+        "sar_coherence": 0.55,
+        "ndvi_change": -0.22,
+        "slope_degrees": 5.2,
+        "soil_moisture": 65
+      },
+      "last_updated": "2026-03-10",
+      "trend": "stable"
+    },
+    {
+      "id": "E003",
+      "name": "Demra Bank Collapse Zone",
+      "river": "Shitalakshya",
+      "risk_level": "high",
+      "retreat_rate_m_year": 15.8,
+      "total_retreat_m": 158,
+      "population_at_risk": 1800,
+      "structures_at_risk": 92,
+      "coordinates": [
+        [90.5088, 23.6998],
+        [90.5092, 23.6994],
+        [90.5098, 23.6988],
+        [90.5102, 23.6982],
+        [90.5105, 23.6975],
+        [90.5108, 23.6968]
+      ],
+      "buffer_zone": {
+        "warning_m": 60,
+        "critical_m": 30
+      },
+      "analysis": {
+        "sar_coherence": 0.38,
+        "ndvi_change": -0.45,
+        "slope_degrees": 12.5,
+        "soil_moisture": 82
+      },
+      "last_updated": "2026-03-10",
+      "trend": "accelerating"
+    },
+    {
+      "id": "E004",
+      "name": "Tongi Rail Bridge Adjacent",
+      "river": "Turag",
+      "risk_level": "low",
+      "retreat_rate_m_year": 3.5,
+      "total_retreat_m": 35,
+      "population_at_risk": 120,
+      "structures_at_risk": 8,
+      "coordinates": [
+        [90.3988, 23.885],
+        [90.3992, 23.8845],
+        [90.3996, 23.884],
+        [90.3998, 23.8835]
+      ],
+      "buffer_zone": {
+        "warning_m": 30,
+        "critical_m": 15
+      },
+      "analysis": {
+        "sar_coherence": 0.72,
+        "ndvi_change": -0.15,
+        "slope_degrees": 3.2,
+        "soil_moisture": 55
+      },
+      "last_updated": "2026-03-10",
+      "trend": "stable"
+    }
+  ],
+  "statistics": {
+    "total_corridors": 4,
+    "high_risk": 2,
+    "medium_risk": 1,
+    "low_risk": 1,
+    "total_population_at_risk": 5170,
+    "total_structures_at_risk": 295,
+    "average_retreat_rate": 10.0,
+    "max_retreat_rate": 15.8
+  },
+  "methodology": {
+    "data_sources": [
+      "Sentinel-1 SAR",
+      "Sentinel-2 Optical",
+      "Landsat 8/9",
+      "DEM"
+    ],
+    "analysis_period": "2016-2026",
+    "confidence_level": 0.85
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "segments": [
+    {
+      "id": "ENC-001",
+      "river": "Buriganga",
+      "riverBn": "বুড়িগঙ্গা",
+      "location": "Sadarghat Area",
+      "lat": 23.705,
+      "lng": 90.376,
+      "width_2016": 320,
+      "width_2026": 180,
+      "shrinkage_pct": 43.75,
+      "severity": "critical",
+      "boundary_2016": [
+        [90.3745, 23.7065],
+        [90.375, 23.706],
+        [90.3758, 23.7055],
+        [90.3765, 23.705],
+        [90.377, 23.7045],
+        [90.3775, 23.704]
+      ],
+      "boundary_2026": [
+        [90.375, 23.706],
+        [90.3754, 23.7057],
+        [90.3759, 23.7053],
+        [90.3763, 23.705],
+        [90.3767, 23.7046],
+        [90.377, 23.7043]
+      ],
+      "cause": "Industrial and commercial land filling",
+      "affected_population": 45000
+    },
+    {
+      "id": "ENC-002",
+      "river": "Turag",
+      "riverBn": "তুরাগ",
+      "location": "Aminbazar Bridge",
+      "lat": 23.85,
+      "lng": 90.355,
+      "width_2016": 280,
+      "width_2026": 120,
+      "shrinkage_pct": 57.14,
+      "severity": "critical",
+      "boundary_2016": [
+        [90.3535, 23.8515],
+        [90.354, 23.851],
+        [90.3548, 23.8505],
+        [90.3555, 23.85],
+        [90.356, 23.8495],
+        [90.3565, 23.849]
+      ],
+      "boundary_2026": [
+        [90.3542, 23.851],
+        [90.3546, 23.8507],
+        [90.3551, 23.8503],
+        [90.3555, 23.85],
+        [90.3558, 23.8497],
+        [90.3561, 23.8494]
+      ],
+      "cause": "Residential and brick kiln encroachment",
+      "affected_population": 32000
+    },
+    {
+      "id": "ENC-003",
+      "river": "Balu",
+      "riverBn": "বালু",
+      "location": "Demra Area",
+      "lat": 23.77,
+      "lng": 90.476,
+      "width_2016": 200,
+      "width_2026": 80,
+      "shrinkage_pct": 60.0,
+      "severity": "critical",
+      "boundary_2016": [
+        [90.4745, 23.7715],
+        [90.475, 23.771],
+        [90.4758, 23.7705],
+        [90.4765, 23.77],
+        [90.477, 23.7695],
+        [90.4775, 23.769]
+      ],
+      "boundary_2026": [
+        [90.4752, 23.771],
+        [90.4756, 23.7707],
+        [90.4761, 23.7703],
+        [90.4765, 23.77],
+        [90.4768, 23.7697],
+        [90.4771, 23.7694]
+      ],
+      "cause": "Housing projects and waste dumping",
+      "affected_population": 28000
+    },
+    {
+      "id": "ENC-004",
+      "river": "Shitalakshya",
+      "riverBn": "শীতলক্ষ্যা",
+      "location": "Narayanganj Industrial Zone",
+      "lat": 23.78,
+      "lng": 90.522,
+      "width_2016": 400,
+      "width_2026": 300,
+      "shrinkage_pct": 25.0,
+      "severity": "moderate",
+      "boundary_2016": [
+        [90.5205, 23.7815],
+        [90.521, 23.781],
+        [90.5218, 23.7805],
+        [90.5225, 23.78],
+        [90.523, 23.7795],
+        [90.5235, 23.779]
+      ],
+      "boundary_2026": [
+        [90.521, 23.781],
+        [90.5214, 23.7807],
+        [90.5219, 23.7803],
+        [90.5223, 23.78],
+        [90.5227, 23.7796],
+        [90.523, 23.7793]
+      ],
+      "cause": "Industrial zone expansion",
+      "affected_population": 55000
+    },
+    {
+      "id": "ENC-005",
+      "river": "Dhaleshwari",
+      "riverBn": "ধলেশ্বরী",
+      "location": "Keraniganj",
+      "lat": 23.71,
+      "lng": 90.32,
+      "width_2016": 500,
+      "width_2026": 410,
+      "shrinkage_pct": 18.0,
+      "severity": "moderate",
+      "boundary_2016": [
+        [90.3185, 23.7115],
+        [90.319, 23.711],
+        [90.3198, 23.7105],
+        [90.3205, 23.71],
+        [90.321, 23.7095],
+        [90.3215, 23.709]
+      ],
+      "boundary_2026": [
+        [90.319, 23.711],
+        [90.3194, 23.7107],
+        [90.3199, 23.7103],
+        [90.3203, 23.71],
+        [90.3207, 23.7096],
+        [90.321, 23.7093]
+      ],
+      "cause": "Sand mining and agricultural encroachment",
+      "affected_population": 18000
+    }
+  ],
+  "statistics": {
+    "total_critical": 3,
+    "total_moderate": 2,
+    "total_affected_population": 178000,
+    "average_shrinkage_pct": 40.78
+  }
+}

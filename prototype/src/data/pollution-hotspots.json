@@ -1,0 +1,306 @@
+{
+  "hotspots": [
+    {
+      "id": "HS-001",
+      "lat": 23.705,
+      "lng": 90.376,
+      "river": "Buriganga",
+      "type": "textile",
+      "severity": 92,
+      "label": "Textile Dye Discharge",
+      "spectral": {
+        "ndti": 0.82,
+        "redBlueRatio": 3.4,
+        "thermal": 28.5
+      },
+      "detected": "2026-03-01",
+      "description": "High Red/Blue spectral ratio indicating textile dye effluent. Consistent pattern over 3 months."
+    },
+    {
+      "id": "HS-002",
+      "lat": 23.699,
+      "lng": 90.388,
+      "river": "Buriganga",
+      "type": "tannery",
+      "severity": 88,
+      "label": "Tannery Waste Plume",
+      "spectral": {
+        "ndti": 0.91,
+        "redBlueRatio": 1.8,
+        "thermal": 30.2
+      },
+      "detected": "2026-02-15",
+      "description": "Extremely high turbidity (NDTI=0.91) with organic signatures. Chromium-contaminated waste suspected."
+    },
+    {
+      "id": "HS-003",
+      "lat": 23.694,
+      "lng": 90.402,
+      "river": "Buriganga",
+      "type": "textile",
+      "severity": 76,
+      "label": "Mixed Industrial Runoff",
+      "spectral": {
+        "ndti": 0.65,
+        "redBlueRatio": 2.9,
+        "thermal": 27.8
+      },
+      "detected": "2026-03-05",
+      "description": "Moderate pollution with textile dye indicators. Multiple potential sources in cluster."
+    },
+    {
+      "id": "HS-004",
+      "lat": 23.86,
+      "lng": 90.353,
+      "river": "Turag",
+      "type": "thermal",
+      "severity": 71,
+      "label": "Thermal Discharge",
+      "spectral": {
+        "ndti": 0.45,
+        "redBlueRatio": 1.2,
+        "thermal": 38.6
+      },
+      "detected": "2026-02-28",
+      "description": "Significant thermal anomaly (+10°C above baseline). Power plant cooling water discharge suspected."
+    },
+    {
+      "id": "HS-005",
+      "lat": 23.84,
+      "lng": 90.357,
+      "river": "Turag",
+      "type": "textile",
+      "severity": 85,
+      "label": "Dyeing Unit Discharge",
+      "spectral": {
+        "ndti": 0.72,
+        "redBlueRatio": 3.8,
+        "thermal": 29.1
+      },
+      "detected": "2026-03-07",
+      "description": "Vivid spectral signature of synthetic dyes. Active discharge visible in latest imagery."
+    },
+    {
+      "id": "HS-006",
+      "lat": 23.78,
+      "lng": 90.522,
+      "river": "Shitalakshya",
+      "type": "tannery",
+      "severity": 67,
+      "label": "Industrial Waste Zone",
+      "spectral": {
+        "ndti": 0.78,
+        "redBlueRatio": 2.1,
+        "thermal": 31.5
+      },
+      "detected": "2026-02-20",
+      "description": "Tannery waste signatures detected. Located near Narayanganj industrial belt."
+    },
+    {
+      "id": "HS-007",
+      "lat": 23.76,
+      "lng": 90.527,
+      "river": "Shitalakshya",
+      "type": "textile",
+      "severity": 79,
+      "label": "Garment Factory Cluster",
+      "spectral": {
+        "ndti": 0.68,
+        "redBlueRatio": 3.1,
+        "thermal": 28.0
+      },
+      "detected": "2026-03-02",
+      "description": "Garment washing and dyeing units discharge detected via high R/B ratio."
+    },
+    {
+      "id": "HS-008",
+      "lat": 23.77,
+      "lng": 90.476,
+      "river": "Balu",
+      "type": "textile",
+      "severity": 94,
+      "label": "Critical Dye Pollution",
+      "spectral": {
+        "ndti": 0.88,
+        "redBlueRatio": 4.1,
+        "thermal": 29.8
+      },
+      "detected": "2026-03-08",
+      "description": "Highest severity hotspot. Extreme dye concentration turning river visibly colored."
+    },
+    {
+      "id": "HS-009",
+      "lat": 23.75,
+      "lng": 90.48,
+      "river": "Balu",
+      "type": "tannery",
+      "severity": 81,
+      "label": "Leather Processing Zone",
+      "spectral": {
+        "ndti": 0.85,
+        "redBlueRatio": 1.9,
+        "thermal": 32.0
+      },
+      "detected": "2026-02-25",
+      "description": "Post-relocation tannery waste still entering via drainage channels."
+    },
+    {
+      "id": "HS-010",
+      "lat": 23.71,
+      "lng": 90.32,
+      "river": "Dhaleshwari",
+      "type": "thermal",
+      "severity": 58,
+      "label": "Mild Thermal Anomaly",
+      "spectral": {
+        "ndti": 0.35,
+        "redBlueRatio": 1.1,
+        "thermal": 35.2
+      },
+      "detected": "2026-03-04",
+      "description": "Moderate thermal discharge. Possibly cooling water from industrial facility."
+    }
+  ],
+  "heatmapPoints": [
+    {
+      "lat": 23.705,
+      "lng": 90.376,
+      "intensity": 0.92,
+      "zone": "Z001",
+      "type": "Tannery"
+    },
+    {
+      "lat": 23.703,
+      "lng": 90.378,
+      "intensity": 0.88,
+      "zone": "Z001",
+      "type": "Tannery"
+    },
+    {
+      "lat": 23.701,
+      "lng": 90.382,
+      "intensity": 0.85,
+      "zone": "Z001",
+      "type": "Tannery"
+    },
+    {
+      "lat": 23.699,
+      "lng": 90.385,
+      "intensity": 0.9,
+      "zone": "Z001",
+      "type": "Tannery"
+    },
+    {
+      "lat": 23.697,
+      "lng": 90.388,
+      "intensity": 0.78,
+      "zone": "Z001",
+      "type": "Tannery"
+    },
+    {
+      "lat": 23.708,
+      "lng": 90.375,
+      "intensity": 0.75,
+      "zone": "Z002",
+      "type": "Textile"
+    },
+    {
+      "lat": 23.707,
+      "lng": 90.374,
+      "intensity": 0.82,
+      "zone": "Z002",
+      "type": "Textile"
+    },
+    {
+      "lat": 23.706,
+      "lng": 90.373,
+      "intensity": 0.8,
+      "zone": "Z002",
+      "type": "Textile"
+    },
+    {
+      "lat": 23.704,
+      "lng": 90.372,
+      "intensity": 0.72,
+      "zone": "Z002",
+      "type": "Textile"
+    },
+    {
+      "lat": 23.702,
+      "lng": 90.375,
+      "intensity": 0.65,
+      "zone": "Z002",
+      "type": "Plume"
+    },
+    {
+      "lat": 23.7,
+      "lng": 90.38,
+      "intensity": 0.6,
+      "zone": "Z002",
+      "type": "Plume"
+    },
+    {
+      "lat": 23.698,
+      "lng": 90.395,
+      "intensity": 0.55,
+      "zone": "Z002",
+      "type": "Plume"
+    },
+    {
+      "lat": 23.86,
+      "lng": 90.352,
+      "intensity": 0.71,
+      "zone": "Z003",
+      "type": "Thermal"
+    },
+    {
+      "lat": 23.858,
+      "lng": 90.354,
+      "intensity": 0.68,
+      "zone": "Z003",
+      "type": "Thermal"
+    },
+    {
+      "lat": 23.842,
+      "lng": 90.356,
+      "intensity": 0.85,
+      "zone": "Z003",
+      "type": "Textile"
+    },
+    {
+      "lat": 23.84,
+      "lng": 90.358,
+      "intensity": 0.78,
+      "zone": "Z003",
+      "type": "Textile"
+    },
+    {
+      "lat": 23.77,
+      "lng": 90.476,
+      "intensity": 0.94,
+      "zone": "Balu",
+      "type": "Textile"
+    },
+    {
+      "lat": 23.768,
+      "lng": 90.478,
+      "intensity": 0.88,
+      "zone": "Balu",
+      "type": "Textile"
+    },
+    {
+      "lat": 23.752,
+      "lng": 90.48,
+      "intensity": 0.81,
+      "zone": "Balu",
+      "type": "Tannery"
+    },
+    {
+      "lat": 23.78,
+      "lng": 90.522,
+      "intensity": 0.67,
+      "zone": "Shitalakshya",
+      "type": "Tannery"
+    }
+  ]
+}
